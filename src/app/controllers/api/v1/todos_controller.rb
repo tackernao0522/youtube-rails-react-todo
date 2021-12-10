@@ -27,19 +27,19 @@ class Api::V1::TodosController < ApplicationController
     end
   end
 
-  def destory
-    if Todo.destory(params[:id])
+  def destroy
+    if Todo.destroy(params[:id])
       head :no_content
     else
-      render json: { error: "Failed to destory" }, status: 422
+      render json: { error: "Failed to destroy" }, status: 422
     end
   end
 
-  def destory_all
-    if Todo.destory_all
+  def destroy_all
+    if Todo.destroy_all
       head :no_content
     else
-      render json: { error: "Failed to destory" }, status: 422
+      render json: { error: "Failed to destroy" }, status: 422
     end
   end
 
