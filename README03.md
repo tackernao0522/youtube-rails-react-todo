@@ -1,3 +1,8 @@
+## React Todo Part3
+
++ `app/javascript/components/AddTodo.jsx`を編集<br>
+
+```
 import React, { memo, useState } from 'react'
 import styled from 'styled-components'
 import { toast } from 'react-toastify'
@@ -56,7 +61,7 @@ const AddTodo = memo((props) => {
 
   const handleInputChange = (event) => {
     const { name, value } = event.target
-    setTodo({ ...todo, [name]: value })
+    setTodo({ ...todo, [name]: value }) // 今後いろいろと入力できるようにしておく
   }
 
   const notify = () => {
@@ -99,7 +104,7 @@ const AddTodo = memo((props) => {
         />
         <Button
           onClick={saveTodo}
-          disabled={!todo.name || /^\s*$/.test(todo.name)}
+          disabled={!todo.name || /^\s*$/.test(todo.name)} // 空白とかの場合はボタンを押させない仕様にしている
         >
           <Icon>
             <FiSend />
@@ -111,3 +116,4 @@ const AddTodo = memo((props) => {
 })
 
 export default AddTodo
+```
