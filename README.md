@@ -189,7 +189,7 @@ end
 
 + `$ bundle exec rake db:seed`を実行<br>
 
-+ `$ rails g site_controller.rb`を実行<br>
++ `$ rails g controller site`を実行<br>
 
 ```
 class SiteController < ApplicationController
